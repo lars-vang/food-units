@@ -1,6 +1,6 @@
 export const defaultFoodUnits = [
-  {id: 1, title: 'Brød', text: 'Brød, ris o.s.v', value: 0, unitsLeft: 10, maxUnits: 10},
-  {id: 2, title: 'Sukker', text: 'Sukker, slik, kage', value: 0, unitsLeft: 4, maxUnits: 4},
+  {id: 1, title: 'Kød', text: 'Kød, fisk, æg og skaldyr', value: 0, unitsLeft: 5, maxUnits: 5},
+  {id: 2, title: 'Mælkeprodukter', text: 'Mælk, A38 og Skyr', value: 0, unitsLeft: 2, maxUnits: 2},
 ];
 
 export const Labels = {
