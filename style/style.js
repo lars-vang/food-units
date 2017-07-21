@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginTop: 30,
+    marginBottom: 20
   },
   dropdown_4: {
      alignSelf: 'flex-end',
@@ -22,34 +23,51 @@ const styles = StyleSheet.create({
   dropdown_4_text: {
     marginVertical: 2,
     marginHorizontal: 0,
+    marginRight: 10,
     fontSize: 18,
-    color: 'white',
-    textAlign: 'center',
+    color: '#000',
+    textAlign: 'right',
     textAlignVertical: 'center',
   },
   foodLine: {
-    height: 100,
-    borderColor: 'rgba(0,0,0,0.8)',
+    height: 60,
+    backgroundColor: '#fff',
+    borderBottomColor: 'rgba(0,0,0,0.1)',
+    borderBottomWidth: 1,
     flexDirection: 'row',
-    marginLeft: MARGIN,
-    marginRight: MARGIN,
-    shadowColor: '#000',
-    backgroundColor: '#a5d6a7',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.2,
-    marginBottom: 4,
-    elevation: 2,
-    borderRadius: 2
+    paddingTop: 5,
   },
   foodDesc: {
     flex: 1,
-    marginLeft: 10,
+    marginLeft: 5,
     marginTop: 5
+  },
+  foodImageContainer: {
+    width: 50,
+    marginLeft: 5
+  },
+  foodImage: {
+    marginTop: 5,
+    width: 40, 
+    height: 40,
+    tintColor: '#00897b'
+  },
+  foodImageWarning: {
+    marginTop: 5,
+    width: 40, 
+    height: 40,
+    tintColor: '#fb8c00'
+  },
+   foodImageLimit: {
+    marginTop: 5,
+    width: 40, 
+    height: 40,
+    tintColor: '#e53935'
   },
   foodHeadline: {
     color: '#000',
     opacity: 1,
-    fontSize: 25,
+    fontSize: 16,
   },
   foodText: {
     color: '#000',
@@ -57,7 +75,12 @@ const styles = StyleSheet.create({
   },
   foodSelect: {
     flex: 1,
-  }
+  },
+  resetBotton: {
+    marginTop: 10,
+    marginLeft: MARGIN,
+    marginRight: MARGIN,
+  },
 });
 
 export default styles

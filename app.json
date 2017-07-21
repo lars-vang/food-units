@@ -1,5 +1,16 @@
 {
   "expo": {
-    "sdkVersion": "18.0.0"
+    "name": "Food Units",
+    "version": "1.0.0",
+    "slug": "Food-units",
+    "icon": "./assets/food-unit-logo.png",
+    "sdkVersion": "18.0.0",
+    "ios": {
+      "bundleIdentifier": "com.zaniack.foodunits"
+    },
+    "android": {
+      "package": "com.zaniack.foodunits"
+    }
   }
+  
 }

@@ -36,10 +36,14 @@ class FoodUnitContainer extends Component {
     }
 
     return (
-         <View style={style.container}>
+         <ScrollView style={style.container}>
             <FoodUnits foodUnits={foodUnits} onFoodUnitSelect={onFoodUnitSelect}/>
-            <Button title={Labels.ResetButton} onPress={resetAllAlert}/>
-        </View>
+            <View style={style.resetBotton}>
+            <Button title={Labels.ResetButton} 
+                    onPress={resetAllAlert}
+                    color="#F44336"/>
+                    </View>
+        </ScrollView>
     );
   }
 }
