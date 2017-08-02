@@ -7,28 +7,42 @@ import {AppRegistry,
   Image,
   TouchableOpacity,
   TouchableHighlight,
-  ScrollView} from 'react-native';
+  ScrollView,
+AsyncStorage } from 'react-native';
 import styles from './style/style'
-import { createStore } from 'redux';
+import { compose, createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import {persistStore, autoRehydrate} from 'redux-persist'
 import foodUnitApp from './reducers';
 import FoodUnitContainer from './containers/FoodUnitContainer';
+import defaultFoodUnits from './constants/';
 
-const store = createStore(foodUnitApp);
+const store = compose(autoRehydrate())(createStore)(foodUnitApp)
 
+class AppProvider extends Component {
+  constructor() {
+    super()
+    this.state = { rehydrated: false }
+  }
 
+  componentWillMount(){
+    persistStore(store, {storage: AsyncStorage}, () => {
+      this.setState({ rehydrated: true })
+    })
+  }
 
-class App extends Component {
-
-  render() {
-        return (
-            <Provider store={store}>
-                <FoodUnitContainer />
-            </Provider>
-        );
+render() {
+    if(!this.state.rehydrated){
+      return <Text>Loading...</Text>
     }
+    return (
+      <Provider store={store}>
+         <FoodUnitContainer /> 
+      </Provider>
+    )
+  }
 };
 
-export default App;
+export default AppProvider;
 
 

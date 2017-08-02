@@ -23,6 +23,8 @@ const foodUnits = (state = defaultFoodUnits, action) => {
       );
     case 'RESET_ALL':
       return defaultFoodUnits;
+    case 'REHYDRATE': 
+      return {...state, ...action.payload.foodUnits}
     default:
       return state;
   }

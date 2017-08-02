@@ -76,7 +76,7 @@ class FoodUnit extends Component {
             dropdownStyle={styles.dropdown_4_dropdown}
             textStyle={styles.dropdown_4_text}
             options={dropDownUnits}
-            defaultValue="0"
+            defaultValue={String(value)}
             onSelect={this.onSelect.bind(this)}
           />
 
